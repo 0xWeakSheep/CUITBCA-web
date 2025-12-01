@@ -71,7 +71,7 @@ export default function CinematicCanvas() {
         
         <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
         
-        <EffectComposer disableNormalPass>
+        <EffectComposer>
           <Bloom luminanceThreshold={0.2} mipmapBlur intensity={0.5} radius={0.4} />
           <Vignette eskil={false} offset={0.1} darkness={1.1} />
         </EffectComposer>
