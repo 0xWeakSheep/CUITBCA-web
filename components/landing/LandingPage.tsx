@@ -137,7 +137,7 @@ export default function LandingPage() {
             <div className="space-y-4">
               <h3 className="text-xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#34d399]">CUITBCA</h3>
               <p className="text-white/60 text-sm leading-relaxed">
-                致力于推动区块链技术的学习和应用，建立开放、包容的学生社区。
+                Dedicated to promoting the learning and application of blockchain technology, building an open and inclusive student community.
               </p>
             </div>
             <div>
