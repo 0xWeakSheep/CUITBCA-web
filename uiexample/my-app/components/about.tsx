@@ -45,7 +45,7 @@ export default function About() {
           <div className="space-y-8">
             <div className="bg-primary/10 border-l-4 border-primary p-6 rounded">
               <h4 className="font-bold text-primary mb-2">成立时间</h4>
-              <p className="text-foreground">2023年</p>
+              <p className="text-foreground">2020年</p>
             </div>
 
             <div className="bg-accent/10 border-l-4 border-accent p-6 rounded">
