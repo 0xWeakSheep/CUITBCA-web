@@ -1,10 +1,11 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
-import { ArrowRight, Globe, Shield, Zap } from "lucide-react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { AboutSection, MembersSection, ResourcesSection, SocialMediaSection } from "./LandingSections";
 
 const CinematicCanvas = dynamic(() => import("./CinematicCanvas"), { ssr: false });
 
@@ -23,10 +24,28 @@ const stagger = {
 };
 
 export default function LandingPage() {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  function handleMouseMove({ clientX, clientY }: React.MouseEvent) {
+    mouseX.set(clientX);
+    mouseY.set(clientY);
+  }
+
   return (
-    <div className="relative min-h-screen overflow-hidden text-white font-sans selection:bg-[#38bdf8] selection:text-[#020617]">
+    <div 
+      className="relative min-h-screen overflow-hidden text-white font-sans selection:bg-[#38bdf8] selection:text-[#020617] group"
+      onMouseMove={handleMouseMove}
+    >
       <CinematicCanvas />
       
+      <motion.div
+        className="pointer-events-none fixed inset-0 z-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+        style={{
+          background: useMotionTemplate`radial-gradient(600px circle at ${mouseX}px ${mouseY}px, rgba(56, 189, 248, 0.15), transparent 80%)`,
+        }}
+      />
+
       {/* Navigation */}
       <motion.nav 
         initial={{ opacity: 0, y: -20 }}
@@ -34,14 +53,24 @@ export default function LandingPage() {
         transition={{ duration: 1 }}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 border-b border-white/5 bg-[#020617]/50 backdrop-blur-md"
       >
-        <div className="text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#34d399]">
-          CUITBCA
+        <div className="flex items-center gap-3">
+          <Image 
+            src="/logo/logo-e9-93-be-e5-8d-8f-e6-97-a0-e5-ad-97-e7-89-88-pixian-ai.png"
+            alt="CUITBCA Logo" 
+            width={32} 
+            height={32} 
+            className="w-8 h-8"
+          />
+          <span className="text-2xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#34d399]">
+            CUITBCA
+          </span>
         </div>
         <div className="hidden md:flex space-x-8 text-sm font-medium tracking-widest text-white/70">
-          <a href="#" className="hover:text-[#38bdf8] transition-colors">MISSION</a>
-          <a href="#" className="hover:text-[#38bdf8] transition-colors">MEMBERS</a>
-          <a href="#" className="hover:text-[#38bdf8] transition-colors">EVENTS</a>
-          <a href="#" className="hover:text-[#38bdf8] transition-colors">CONTACT</a>
+          <a href="#" className="hover:text-[#38bdf8] transition-colors">HOME</a>
+          <a href="#about" className="hover:text-[#38bdf8] transition-colors">ABOUT</a>
+          <a href="#members" className="hover:text-[#38bdf8] transition-colors">MEMBERS</a>
+          <a href="#resources" className="hover:text-[#38bdf8] transition-colors">RESOURCES</a>
+          <a href="#social" className="hover:text-[#38bdf8] transition-colors">CONTACT</a>
         </div>
       </motion.nav>
 
@@ -53,8 +82,20 @@ export default function LandingPage() {
           animate="animate"
           className="max-w-4xl space-y-8"
         >
+          <motion.div variants={fadeIn} className="flex justify-center mb-8">
+            <div className="relative w-32 h-32 md:w-40 md:h-40">
+              <Image
+                src="/logo/logo-e9-93-be-e5-8d-8f-e6-97-a0-e5-ad-97-e7-89-88-pixian-ai.png"
+                alt="CUITBCA Logo"
+                fill
+                className="object-contain drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]"
+                priority
+              />
+            </div>
+          </motion.div>
+
           <motion.div variants={fadeIn} className="inline-block px-4 py-1 mb-4 text-xs tracking-[0.2em] text-[#34d399] border border-[#34d399]/30 rounded-full bg-[#34d399]/10 backdrop-blur-sm">
-            EST. 2024 // BLOCKCHAIN ASSOCIATION
+            EST. 2020 // BLOCKCHAIN ASSOCIATION
           </motion.div>
           
           <motion.h1 variants={fadeIn} className="text-5xl md:text-8xl font-bold tracking-tight leading-tight">
@@ -84,66 +125,48 @@ export default function LandingPage() {
         </motion.div>
       </main>
 
-      {/* Features Section */}
-      <section className="relative z-10 py-32 px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <FeatureCard 
-            title="GLOBAL NETWORK"
-            desc="Connecting nodes across the world for a unified decentralized vision."
-            icon={<Globe className="w-6 h-6 text-[#38bdf8]" />}
-            image="/picture/eric-stoynov-hsFMnOqdiTs-unsplash.jpg"
-          />
-          <FeatureCard 
-            title="SECURE INFRA"
-            desc="Building resilient systems with state-of-the-art cryptographic security."
-            icon={<Shield className="w-6 h-6 text-[#34d399]" />}
-            image="/picture/leo_visions-jgNBV1jsAS0-unsplash.jpg"
-          />
-          <FeatureCard 
-            title="FAST EXECUTION"
-            desc="High-performance consensus mechanisms for real-time applications."
-            icon={<Zap className="w-6 h-6 text-purple-400" />}
-            image="/picture/tanya-barrow-y4CBx5GOlEM-unsplash.jpg"
-          />
-        </div>
-      </section>
+      <AboutSection />
+      <MembersSection />
+      <ResourcesSection />
+      <SocialMediaSection />
 
       {/* Footer */}
-      <footer className="relative z-10 border-t border-white/10 bg-[#020617]/80 backdrop-blur-xl py-12">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center opacity-50 text-sm text-center md:text-left">
-          <p>© 2024 CUIT BLOCKCHAIN ASSOCIATION</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
-            <a href="#" className="hover:text-white transition-colors">Discord</a>
+      <footer className="relative z-10 border-t border-white/10 bg-[#020617]/80 backdrop-blur-xl py-16">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] to-[#34d399]">CUITBCA</h3>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Dedicated to promoting the learning and application of blockchain technology, building an open and inclusive student community.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-white mb-6 tracking-wider">QUICK LINKS</h4>
+              <ul className="space-y-3 text-sm text-white/60">
+                <li><a href="#about" className="hover:text-[#38bdf8] transition-colors">About Us</a></li>
+                <li><a href="#members" className="hover:text-[#38bdf8] transition-colors">Members</a></li>
+                <li><a href="#resources" className="hover:text-[#38bdf8] transition-colors">Resources</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-white mb-6 tracking-wider">SOCIAL</h4>
+              <ul className="space-y-3 text-sm text-white/60">
+                <li><a href="#" className="hover:text-[#38bdf8] transition-colors">GitHub</a></li>
+                <li><a href="#" className="hover:text-[#38bdf8] transition-colors">Twitter</a></li>
+                <li><a href="#" className="hover:text-[#38bdf8] transition-colors">Instagram</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-bold text-white mb-6 tracking-wider">CONTACT</h4>
+              <p className="text-sm text-white/60 mb-2">📧 contact@cuitbca.com</p>
+              <p className="text-sm text-white/60">📍 CUIT Campus</p>
+            </div>
+          </div>
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center opacity-50 text-sm">
+            <p>© 2025 CUIT BLOCKCHAIN ASSOCIATION. All rights reserved.</p>
           </div>
         </div>
       </footer>
-    </div>
-  );
-}
-
-function FeatureCard({ title, desc, icon, image }: { title: string; desc: string; icon: React.ReactNode; image: string }) {
-  return (
-    <div className="group relative h-[400px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 hover:border-[#38bdf8]/50 hover:scale-[1.02] rounded-lg">
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src={image} 
-          alt={title} 
-          fill 
-          className="object-cover opacity-40 transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-          sizes="(max-width: 768px) 100vw, 33vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/80 to-transparent" />
-      </div>
-      
-      <div className="relative z-10 h-full flex flex-col justify-end p-8">
-        <div className="mb-4 p-3 w-fit rounded-full bg-white/10 backdrop-blur-md border border-white/10">
-          {icon}
-        </div>
-        <h3 className="text-xl font-bold tracking-widest mb-2 text-white">{title}</h3>
-        <p className="text-white/60 text-sm leading-relaxed">{desc}</p>
-      </div>
     </div>
   );
 }
