@@ -1,37 +1,40 @@
 "use client";
 
 import React from "react";
-import { Github, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Instagram, MessageCircle, Twitter } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { useLanguage } from "@/i18n/language-provider";
 
 export function SocialMediaSection() {
+  const { t } = useLanguage();
+  
   const platforms = [
     {
-      name: "GitHub",
+      name: t("social.github.name"),
       icon: Github,
       url: "https://github.com",
-      description: "View our code repositories and projects",
+      description: t("social.github.description"),
       color: "bg-[#24292e] hover:bg-[#2f363d]",
     },
     {
-      name: "LinkedIn",
-      icon: Linkedin,
-      url: "https://linkedin.com",
-      description: "Career development and industry information",
-      color: "bg-[#0077b5] hover:bg-[#008ec4]",
-    },
-    {
-      name: "Instagram",
-      icon: Instagram,
-      url: "https://instagram.com",
-      description: "Follow our activities and updates",
-      color: "bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90",
-    },
-    {
-      name: "WeChat",
+      name: t("social.xiaohongshu.name"),
       icon: MessageCircle,
-      url: "#wechat",
-      description: "Join our WeChat Official Account",
+      url: "https://xiaohongshu.com",
+      description: t("social.xiaohongshu.description"),
+      color: "bg-[#000000] hover:bg-[#111111]",
+    },
+    {
+      name: t("social.twitter.name"),
+      icon: Twitter,
+      url: "https://twitter.com",
+      description: t("social.twitter.description"),
+      color: "bg-[#1da1f2] hover:bg-[#1e9bfc]",
+    },
+    {
+      name: t("social.wechatOfficial.name"),
+      icon: MessageCircle,
+      url: "https://wechat.com",
+      description: t("social.wechatOfficial.description"),
       color: "bg-[#07c160] hover:bg-[#08d169]",
     },
   ];
@@ -39,7 +42,7 @@ export function SocialMediaSection() {
   return (
     <section id="social" className="relative z-10 w-full py-24 px-4">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader title="Social Media" subtitle="Follow us on major platforms for the latest updates" />
+        <SectionHeader title={t("social.title")} subtitle={t("social.subtitle")} />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {platforms.map((platform, index) => {
@@ -65,14 +68,14 @@ export function SocialMediaSection() {
         </div>
 
         <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-8 backdrop-blur-sm">
-          <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">More Contact Information</h3>
+          <h3 className="text-xl font-bold text-white mb-6 border-b border-white/10 pb-4">{t("social.moreContact.title")}</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="flex items-start gap-4">
                 <div className="p-3 bg-[#38bdf8]/10 rounded-lg text-[#38bdf8]">
                     <span className="text-2xl">📧</span>
                 </div>
                 <div>
-                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider">Email</p>
+                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider">{t("social.moreContact.email")}</p>
                     <a href="mailto:contact@example.com" className="text-white hover:text-[#38bdf8] font-medium transition-colors">
                         contact@example.com
                     </a>
@@ -83,7 +86,7 @@ export function SocialMediaSection() {
                     <span className="text-2xl">📱</span>
                 </div>
                 <div>
-                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider">WeChat Official</p>
+                    <p className="text-white/50 text-sm mb-1 uppercase tracking-wider">{t("social.moreContact.wechatOfficial")}</p>
                     <p className="text-white font-medium">CUITBCA - Link Chain</p>
                 </div>
             </div>

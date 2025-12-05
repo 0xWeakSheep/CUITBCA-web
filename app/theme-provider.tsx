@@ -20,9 +20,13 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const savedTheme = localStorage.getItem("theme") as Theme | null;
     if (savedTheme) {
       setTheme(savedTheme);
-      document.documentElement.classList.toggle("light", savedTheme === "light");
+      if (savedTheme === "light") {
+        document.documentElement.classList.add("light");
+      } else {
+        document.documentElement.classList.remove("light");
+      }
     } else {
-      // 初始化时设置默认主题
+      // 初始化时设置默认主题为 dark（:root 默认就是 dark）
       document.documentElement.classList.remove("light");
     }
   }, []);
@@ -32,16 +36,15 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme(newTheme);
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", newTheme);
-      document.documentElement.classList.toggle("light", newTheme === "light");
+      if (newTheme === "light") {
+        document.documentElement.classList.add("light");
+      } else {
+        document.documentElement.classList.remove("light");
+      }
     }
   };
 
-  // 在未挂载时也提供默认值，避免错误
-  const contextValue = mounted
-    ? { theme, toggleTheme }
-    : { theme: "dark" as Theme, toggleTheme: () => {} };
-
-  return <ThemeContext.Provider value={contextValue}>{children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={{ theme, toggleTheme }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {

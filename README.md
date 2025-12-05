@@ -19,6 +19,24 @@ This project is a "Cinematic Sci-Fi" style landing page for the Blockchain Assoc
 - Lucide React
 
 ## Getting Started
+```
+components/
+├── landing/                    # 落地页相关组件
+│   ├── LandingPage.tsx        # 主页面组件（组合所有组件）
+│   ├── Navigation.tsx         # 导航栏组件
+│   ├── Hero.tsx               # 英雄区域组件
+│   ├── Footer.tsx             # 页脚组件
+│   ├── CinematicCanvas.tsx    # 背景画布组件
+│   └── sections/              # 各个内容区块
+│       ├── index.ts           # 统一导出文件
+│       ├── AboutSection.tsx   # 关于我们区块
+│       ├── MembersSection.tsx # 成员区块
+│       ├── ResourcesSection.tsx # 资源区块
+│       └── SocialMediaSection.tsx # 社交媒体区块
+└── ui/                        # 通用UI组件
+    ├── Card.tsx               # 卡片组件
+    └── SectionHeader.tsx      # 区块标题组件
+```
 
 1. Install dependencies:
    ```bash

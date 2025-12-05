@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "members": "MEMBERS",
+    "resources": "RESOURCES",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "tagline": "EST. 2022 // All In Crypto",
+    "title": "CUIT Blockchain Association",
+    "description": "We are architects of the new digital economy. Connecting visionaries, developers, and innovators to build the infrastructure of tomorrow.",
+    "joinUs": "JOIN US",
+    "explore": "EXPLORE"
+  },
+  "about": {
+    "title": "About Us",
+    "mission": {
+      "title": "Our Mission",
+      "content": "CUITBCA is dedicated to promoting the understanding and application of blockchain technology on campus, providing students with a platform for learning, exchange, and practice. We believe blockchain technology will shape the future."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "content": "To build an open, inclusive, and innovative learning community that helps students master blockchain technology and cultivate outstanding talent for the industry."
+    },
+    "values": {
+      "title": "Our Values",
+      "openness": "Openness - Welcome all students interested in blockchain",
+      "innovation": "Innovation - Continuously explore new learning approaches",
+      "practicality": "Practicality - Combine theory with practice"
+    },
+    "stats": {
+      "founded": "Founded",
+      "members": "Members",
+      "activityFrequency": "Activity Frequency",
+      "developmentDirection": "Development Direction",
+      "membersCount": "500+ Active Members",
+      "activityDesc": "Weekly online sharing and practice activities",
+      "directionDesc": "Promote the application and popularization of blockchain technology on campus"
+    }
+  },
+  "members": {
+    "title": "Team Members",
+    "joinUs": {
+      "title": "Join Us",
+      "description": "We welcome all students interested in blockchain technology to join the CUITBCA family! Together, let's explore the decentralized future.",
+      "button": "Join Now"
+    },
+    "emailContact": "EMAIL CONTACT"
+  },
+  "resources": {
+    "title": "Learning Resources",
+    "subtitle": "Integrating the highest quality learning resources to support your growth journey",
+    "github": {
+      "title": "GitHub Repository",
+      "description": "Visit our GitHub account to access the latest project code, tutorials, and examples"
+    },
+    "reports": {
+      "title": "Blockchain Research Reports",
+      "description": "In-depth analysis reports and industry research to understand the latest technological trends and market dynamics"
+    },
+    "materials": {
+      "title": "Learning Materials",
+      "description": "Curated tutorials, documentation, and best practice guides to help you get started quickly"
+    },
+    "downloads": {
+      "title": "Download Center",
+      "description": "Access meeting materials, presentations, tools, and other related files"
+    },
+    "learnMore": "Learn More",
+    "featured": {
+      "title": "Featured Resources",
+      "fundamentals": {
+        "title": "📚 Blockchain Fundamentals Tutorial Series",
+        "description": "Learn blockchain technology from scratch, including cryptography, consensus algorithms, smart contracts, and other core content"
+      },
+      "solidity": {
+        "title": "💻 Solidity Development Beginner's Guide",
+        "description": "Master smart contract development skills, including project practice and common security issues"
+      },
+      "defi": {
+        "title": "🔗 DeFi Application Case Analysis",
+        "description": "Deeply understand decentralized finance applications and learn the operational mechanisms of cutting-edge market projects"
+      }
+    }
+  },
+  "social": {
+    "title": "Social Media",
+    "subtitle": "Follow us on major platforms for the latest updates",
+    "github": {
+      "name": "GitHub",
+      "description": "View our code repositories and projects"
+    },
+    "xiaohongshu": {
+      "name": "Xiaohongshu",
+      "description": "Follow our activities and updates"
+    },
+    "twitter": {
+      "name": "Twitter",
+      "description": "Follow our latest updates"
+    },
+    "wechatOfficial": {
+      "name": "WeChat Official Account",
+      "description": "Join our WeChat Official Account"
+    },
+    "moreContact": {
+      "title": "More Contact Information",
+      "email": "Email",
+      "wechatOfficial": "WeChat Official"
+    }
+  },
+  "footer": {
+    "description": "Dedicated to promoting the learning and application of blockchain technology, building an open and inclusive student community.",
+    "quickLinks": "QUICK LINKS",
+    "social": "SOCIAL",
+    "contact": "CONTACT",
+    "aboutUs": "About Us",
+    "copyright": "© 2025 CUIT BLOCKCHAIN ASSOCIATION. All rights reserved."
+  },
+  "theme": {
+    "switchToLight": "Switch to light theme",
+    "switchToDark": "Switch to dark theme"
+  }
+}
+
