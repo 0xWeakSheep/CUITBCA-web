@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "members": "成员",
+    "resources": "资源",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "tagline": "成立于 2022 // 专注加密",
+    "title": "CUIT 区块链协会",
+    "description": "我们是新数字经济的建筑师。连接有远见者、开发者和创新者，共同构建未来的基础设施。",
+    "joinUs": "加入我们",
+    "explore": "探索"
+  },
+  "about": {
+    "title": "关于我们",
+    "mission": {
+      "title": "我们的使命",
+      "content": "CUITBCA 致力于在校园内推广区块链技术的理解和应用，为学生提供学习、交流和实践的平台。我们相信区块链技术将塑造未来。"
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "content": "建立一个开放、包容和创新的学习社区，帮助学生掌握区块链技术，为行业培养优秀人才。"
+    },
+    "values": {
+      "title": "我们的价值观",
+      "openness": "开放 - 欢迎所有对区块链感兴趣的学生",
+      "innovation": "创新 - 不断探索新的学习方法",
+      "practicality": "实践 - 理论与实践相结合"
+    },
+    "stats": {
+      "founded": "成立时间",
+      "members": "成员",
+      "activityFrequency": "活动频率",
+      "developmentDirection": "发展方向",
+      "membersCount": "500+ 活跃成员",
+      "activityDesc": "每周在线分享和实践活动",
+      "directionDesc": "推动区块链技术在校园的应用和普及"
+    }
+  },
+  "members": {
+    "title": "团队成员",
+    "joinUs": {
+      "title": "加入我们",
+      "description": "我们欢迎所有对区块链技术感兴趣的学生加入 CUITBCA 大家庭！让我们一起探索去中心化的未来。",
+      "button": "立即加入"
+    },
+    "emailContact": "邮件联系"
+  },
+  "resources": {
+    "title": "学习资源",
+    "subtitle": "整合最优质的学习资源，支持您的成长之旅",
+    "github": {
+      "title": "GitHub 仓库",
+      "description": "访问我们的 GitHub 账户，获取最新项目代码、教程和示例"
+    },
+    "reports": {
+      "title": "区块链研究报告",
+      "description": "深入的分析报告和行业研究，了解最新的技术趋势和市场动态"
+    },
+    "materials": {
+      "title": "学习资料",
+      "description": "精选的教程、文档和最佳实践指南，帮助您快速入门"
+    },
+    "downloads": {
+      "title": "下载中心",
+      "description": "访问会议资料、演示文稿、工具和其他相关文件"
+    },
+    "learnMore": "了解更多",
+    "featured": {
+      "title": "精选资源",
+      "fundamentals": {
+        "title": "📚 区块链基础教程系列",
+        "description": "从零开始学习区块链技术，包括密码学、共识算法、智能合约等核心内容"
+      },
+      "solidity": {
+        "title": "💻 Solidity 开发入门指南",
+        "description": "掌握智能合约开发技能，包括项目实践和常见安全问题"
+      },
+      "defi": {
+        "title": "🔗 DeFi 应用案例分析",
+        "description": "深入了解去中心化金融应用，学习前沿市场项目的运作机制"
+      }
+    }
+  },
+  "social": {
+    "title": "社交媒体",
+    "subtitle": "在主要平台上关注我们，获取最新动态",
+    "github": {
+      "name": "GitHub",
+      "description": "查看我们的代码仓库和项目"
+    },
+    "xiaohongshu": {
+      "name": "小红书",
+      "description": "关注我们的活动和更新"
+    },
+    "twitter": {
+      "name": "Twitter",
+      "description": "关注我们的最新动态"
+    },
+    "wechatOfficial": {
+      "name": "微信公众号",
+      "description": "加入我们的微信公众号"
+    },
+    "moreContact": {
+      "title": "更多联系信息",
+      "email": "邮箱",
+      "wechatOfficial": "微信公众号"
+    }
+  },
+  "footer": {
+    "description": "致力于推广区块链技术的学习和应用，建设开放包容的学生社区。",
+    "quickLinks": "快速链接",
+    "social": "社交",
+    "contact": "联系方式",
+    "aboutUs": "关于我们",
+    "copyright": "© 2025 CUIT 区块链协会。保留所有权利。"
+  },
+  "theme": {
+    "switchToLight": "切换到浅色主题",
+    "switchToDark": "切换到深色主题"
+  }
+}
+

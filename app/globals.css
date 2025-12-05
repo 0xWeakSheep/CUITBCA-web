@@ -1,20 +1,120 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
+/* 默认是 dark 主题（:root 定义的） */
 :root {
-  --background: #020617;
-  --foreground: #ffffff;
+  --background: oklch(0.12 0.01 255);
+  --foreground: oklch(0.92 0.02 250);
+  --card: oklch(0.16 0.01 255);
+  --card-foreground: oklch(0.95 0.02 250);
+  --popover: oklch(0.16 0.01 255);
+  --popover-foreground: oklch(0.95 0.02 250);
+  --primary: oklch(0.75 0.14 255);
+  --primary-foreground: oklch(0.12 0.01 255);
+  --secondary: oklch(0.4 0.06 260);
+  --secondary-foreground: oklch(0.95 0.02 255);
+  --muted: oklch(0.23 0.02 260);
+  --muted-foreground: oklch(0.82 0.02 260);
+  --accent: oklch(0.54 0.09 293);
+  --accent-foreground: oklch(0.12 0.01 255);
+  --destructive: oklch(0.52 0.23 27.325);
+  --destructive-foreground: oklch(0.98 0.01 0);
+  --border: oklch(0.22 0.01 255);
+  --input: oklch(0.22 0.01 255);
+  --ring: oklch(0.75 0.14 255);
+  --radius: 0.75rem;
+}
+
+/* light 主题覆盖 */
+.light {
+  --background: oklch(0.18 0.02 255);
+  --foreground: oklch(0.95 0.02 250);
+  --card: oklch(0.22 0.02 255);
+  --card-foreground: oklch(0.98 0.01 250);
+  --popover: oklch(0.22 0.02 255);
+  --popover-foreground: oklch(0.98 0.01 250);
+  --primary: oklch(0.69 0.18 255);
+  --primary-foreground: oklch(0.18 0.02 255);
+  --secondary: oklch(0.48 0.08 260);
+  --secondary-foreground: oklch(0.97 0.02 255);
+  --muted: oklch(0.32 0.04 260);
+  --muted-foreground: oklch(0.78 0.02 260);
+  --accent: oklch(0.6 0.11 293);
+  --accent-foreground: oklch(0.15 0.02 255);
+  --destructive: oklch(0.57 0.24 27.325);
+  --destructive-foreground: oklch(0.98 0.01 0);
+  --border: oklch(0.32 0.02 255);
+  --input: oklch(0.32 0.02 255);
+  --ring: oklch(0.69 0.18 255);
 }
 
 @theme inline {
+  --font-sans: "Inter", "HarmonyOS Sans SC", "Segoe UI", system-ui,
+    -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Force dark mode styles as base */
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    position: relative;
+    background-image: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.25), transparent 45%),
+      radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.35), transparent 40%),
+      radial-gradient(circle at 50% 80%, rgba(14, 165, 233, 0.2), transparent 60%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(1, 8, 30, 0.75) 0%, rgba(2, 6, 23, 0.95) 100%);
+    pointer-events: none;
+    z-index: -2;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: linear-gradient(transparent, rgba(59, 130, 246, 0.08)),
+      repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0, rgba(255, 255, 255, 0.02) 1px, transparent 1px, transparent 120px),
+      repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.015) 0, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 120px);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
 }
