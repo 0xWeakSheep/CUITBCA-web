@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "home": "首页",
+    "about": "关于",
+    "members": "成员",
+    "resources": "资源",
+    "contact": "联系"
+  },
+  "hero": {
+    "tagline": "成立于2020年 // 区块链协会",
+    "titlePrimary": "去中心化",
+    "titleSecondary": "未来"
+  }
+}

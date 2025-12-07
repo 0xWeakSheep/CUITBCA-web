@@ -31,3 +31,44 @@ This project is a "Cinematic Sci-Fi" style landing page for the Blockchain Assoc
    ```
 
 3. Open [http://localhost:3000](http://localhost:3000) with your browser.
+
+## Project Structure
+
+```
+.
+├── app
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── theme-provider.tsx
+├── components
+│   ├── landing
+│   │   ├── CinematicCanvas.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── LandingPage.tsx
+│   │   ├── Navigation.tsx
+│   │   └── sections
+│   │       ├── AboutSection.tsx
+│   │       ├── MembersSection.tsx
+│   │       ├── ResourcesSection.tsx
+│   │       ├── SocialMediaSection.tsx
+│   │       └── index.ts
+│   └── ui
+│       ├── Card.tsx
+│       └── SectionHeader.tsx
+├── i18n
+│   ├── config.ts
+│   ├── language-provider.tsx
+│   └── locales
+│       ├── en.json
+│       └── zh.json
+├── public
+│   ├── logo
+│   │   └── logo.png
+│   └── picture
+├── types
+│   └── index.ts
+└── ...
+```

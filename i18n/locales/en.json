@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "members": "Members",
+    "resources": "Resources",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "EST. 2020 // BLOCKCHAIN ASSOCIATION",
+    "titlePrimary": "DECENTRALIZED",
+    "titleSecondary": "FUTURE"
+  }
+}
