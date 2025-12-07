@@ -2,17 +2,28 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { NavLink } from "@/types";
+import { useLanguage } from "@/i18n/language-provider";
+import type { Messages } from "@/i18n/config";
 
-const links: NavLink[] = [
-  { label: "HOME", href: "#" },
-  { label: "ABOUT", href: "#about" },
-  { label: "MEMBERS", href: "#members" },
-  { label: "RESOURCES", href: "#resources" },
-  { label: "CONTACT", href: "#social" },
-];
+const navTargets = [
+  { key: "home", href: "#" },
+  { key: "about", href: "#about" },
+  { key: "members", href: "#members" },
+  { key: "resources", href: "#resources" },
+  { key: "contact", href: "#social" },
+] as const satisfies Array<{ key: keyof Messages["navigation"]; href: string }>;
 
 export function Navigation() {
+  const { language, setLanguage, messages } = useLanguage();
+  const localizedLinks = navTargets.map(({ key, href }) => ({
+    href,
+    label: messages.navigation[key],
+  }));
+
+  function toggleLanguage() {
+    setLanguage(language === "zh" ? "en" : "zh");
+  }
+
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
@@ -33,12 +44,19 @@ export function Navigation() {
           CUITBCA
         </span>
       </div>
-      <div className="hidden md:flex space-x-8 text-sm font-medium tracking-widest text-white/70">
-        {links.map((link) => (
+      <div className="hidden md:flex items-center gap-6 text-sm font-medium tracking-widest text-white/70">
+        {localizedLinks.map((link) => (
           <a key={link.href} href={link.href} className="hover:text-[#38bdf8] transition-colors">
             {link.label}
           </a>
         ))}
+        <button
+          type="button"
+          onClick={toggleLanguage}
+          className="px-4 py-2 border border-white/20 rounded-full text-xs uppercase tracking-[0.3em] hover:border-[#38bdf8]/60 hover:text-white transition-colors"
+        >
+          {language === "zh" ? "EN" : "中文"}
+        </button>
       </div>
     </motion.nav>
   );
