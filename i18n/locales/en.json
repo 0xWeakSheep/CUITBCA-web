@@ -9,6 +9,166 @@
   "hero": {
     "tagline": "EST. 2020 // BLOCKCHAIN ASSOCIATION",
     "titlePrimary": "DECENTRALIZED",
-    "titleSecondary": "FUTURE"
+    "titleSecondary": "FUTURE",
+    "description": "We are architects of the new digital economy. Connecting visionaries, developers, and innovators to build the infrastructure of tomorrow.",
+    "ctaJoin": "JOIN US",
+    "ctaExplore": "EXPLORE"
+  },
+  "about": {
+    "title": "About Us",
+    "missionTitle": "Our Mission",
+    "missionDescription": "CUITBCA is dedicated to promoting the understanding and application of blockchain technology on campus, providing students with a platform for learning, exchange, and practice. We believe blockchain technology will shape the future.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "To build an open, inclusive, and innovative learning community that helps students master blockchain technology and cultivate outstanding talent for the industry.",
+    "valuesTitle": "Our Values",
+    "values": [
+      "Openness - Welcome all students interested in blockchain",
+      "Innovation - Continuously explore new learning approaches",
+      "Practicality - Combine theory with practice"
+    ],
+    "highlights": [
+      { "title": "Founded", "value": "2020" },
+      { "title": "Members", "value": "500+ Active Members" },
+      { "title": "Activity Frequency", "value": "Weekly online sharing and practice activities" },
+      { "title": "Development Direction", "value": "Promote the application and popularization of blockchain technology on campus" }
+    ]
+  },
+  "members": {
+    "title": "Team Members",
+    "ctaTitle": "Join Us",
+    "ctaDescription": "We welcome all students interested in blockchain technology to join the CUITBCA family! Together, let's explore the decentralized future.",
+    "ctaButton": "Join Now",
+    "ctaEmail": "join@example.com",
+    "emailLabel": "EMAIL CONTACT",
+    "list": [
+      {
+        "name": "Zhang Ming",
+        "role": "President",
+        "bio": "Blockchain technology enthusiast, focused on smart contract development",
+        "contact": "zhangming@example.com",
+        "color": "from-blue-400 to-blue-600"
+      },
+      {
+        "name": "Li Fang",
+        "role": "Vice President",
+        "bio": "Data analysis expert, dedicated to blockchain data research",
+        "contact": "lifang@example.com",
+        "color": "from-emerald-400 to-emerald-600"
+      },
+      {
+        "name": "Wang Wei",
+        "role": "Technical Lead",
+        "bio": "Full-stack developer, driving technical practice and innovation",
+        "contact": "wangwei@example.com",
+        "color": "from-purple-400 to-purple-600"
+      },
+      {
+        "name": "Chen Si",
+        "role": "Operations Lead",
+        "bio": "Marketing professional, responsible for association brand building",
+        "contact": "chensi@example.com",
+        "color": "from-orange-400 to-orange-600"
+      }
+    ]
+  },
+  "resources": {
+    "title": "Learning Resources",
+    "subtitle": "Integrating the highest quality learning resources to support your growth journey",
+    "list": [
+      {
+        "title": "GitHub Repository",
+        "description": "Visit our GitHub account to access the latest project code, tutorials, and examples",
+        "url": "https://github.com",
+        "gradient": "from-gray-700 to-gray-900"
+      },
+      {
+        "title": "Blockchain Research Reports",
+        "description": "In-depth analysis reports and industry research to understand the latest technological trends and market dynamics",
+        "url": "#research",
+        "gradient": "from-blue-600 to-blue-900"
+      },
+      {
+        "title": "Learning Materials",
+        "description": "Curated tutorials, documentation, and best practice guides to help you get started quickly",
+        "url": "#materials",
+        "gradient": "from-purple-600 to-purple-900"
+      },
+      {
+        "title": "Download Center",
+        "description": "Access meeting materials, presentations, tools, and other related files",
+        "url": "#downloads",
+        "gradient": "from-emerald-600 to-emerald-900"
+      }
+    ],
+    "featuredTitle": "Featured Resources",
+    "featured": [
+      {
+        "title": "📚 Blockchain Fundamentals Tutorial Series",
+        "description": "Learn blockchain technology from scratch, including cryptography, consensus algorithms, smart contracts, and other core content"
+      },
+      {
+        "title": "💻 Solidity Development Beginner's Guide",
+        "description": "Master smart contract development skills, including project practice and common security issues"
+      },
+      {
+        "title": "🔗 DeFi Application Case Analysis",
+        "description": "Deeply understand decentralized finance applications and learn the operational mechanisms of cutting-edge market projects"
+      }
+    ],
+    "learnMore": "Learn More"
+  },
+  "social": {
+    "title": "Social Media",
+    "subtitle": "Follow us on major platforms for the latest updates",
+    "list": [
+      {
+        "name": "GitHub",
+        "description": "View our code repositories and projects",
+        "url": "https://github.com",
+        "color": "bg-[#24292e] hover:bg-[#2f363d]"
+      },
+      {
+        "name": "LinkedIn",
+        "description": "Career development and industry information",
+        "url": "https://linkedin.com",
+        "color": "bg-[#0077b5] hover:bg-[#008ec4]"
+      },
+      {
+        "name": "Instagram",
+        "description": "Follow our activities and updates",
+        "url": "https://instagram.com",
+        "color": "bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90"
+      },
+      {
+        "name": "WeChat",
+        "description": "Join our WeChat Official Account",
+        "url": "#wechat",
+        "color": "bg-[#07c160] hover:bg-[#08d169]"
+      }
+    ],
+    "contactTitle": "More Contact Information",
+    "emailLabel": "Email",
+    "emailValue": "contact@example.com",
+    "wechatLabel": "WeChat Official",
+    "wechatValue": "CUITBCA - Link Chain"
+  },
+  "footer": {
+    "aboutDescription": "Dedicated to promoting the learning and application of blockchain technology, building an open and inclusive student community.",
+    "quickLinksTitle": "QUICK LINKS",
+    "quickLinks": [
+      { "label": "About Us", "href": "#about" },
+      { "label": "Members", "href": "#members" },
+      { "label": "Resources", "href": "#resources" }
+    ],
+    "socialTitle": "SOCIAL",
+    "socialLinks": [
+      { "label": "GitHub", "href": "#" },
+      { "label": "Twitter", "href": "#" },
+      { "label": "Instagram", "href": "#" }
+    ],
+    "contactTitle": "CONTACT",
+    "contactEmail": "contact@cuitbca.com",
+    "contactAddress": "CUIT Campus",
+    "copyright": "© 2025 CUIT BLOCKCHAIN ASSOCIATION. All rights reserved."
   }
 }

@@ -9,6 +9,166 @@
   "hero": {
     "tagline": "成立于2020年 // 区块链协会",
     "titlePrimary": "去中心化",
-    "titleSecondary": "未来"
+    "titleSecondary": "未来",
+    "description": "我们是新数字经济的架构师，连接有远见的开发者与创新者，共同构建明日基础设施。",
+    "ctaJoin": "加入我们",
+    "ctaExplore": "探索"
+  },
+  "about": {
+    "title": "关于我们",
+    "missionTitle": "我们的使命",
+    "missionDescription": "CUITBCA 致力于在校园内推广区块链技术的理解与应用，为同学们提供学习、交流与实践的平台。我们相信区块链技术将塑造未来。",
+    "visionTitle": "我们的愿景",
+    "visionDescription": "打造一个开放、包容且富有创新精神的学习社区，帮助学生掌握区块链技术，为行业培养优秀人才。",
+    "valuesTitle": "我们的价值观",
+    "values": [
+      "开放——欢迎所有对区块链感兴趣的同学",
+      "创新——不断探索新的学习方式",
+      "实践——理论与实践相结合"
+    ],
+    "highlights": [
+      { "title": "成立时间", "value": "2020" },
+      { "title": "成员规模", "value": "500+ 活跃成员" },
+      { "title": "活动频率", "value": "每周线上分享与实践活动" },
+      { "title": "发展方向", "value": "推动区块链技术在校园的应用与普及" }
+    ]
+  },
+  "members": {
+    "title": "核心成员",
+    "ctaTitle": "加入我们",
+    "ctaDescription": "欢迎所有对区块链技术感兴趣的同学加入 CUITBCA，一起探索去中心化未来。",
+    "ctaButton": "立即加入",
+    "ctaEmail": "join@example.com",
+    "emailLabel": "邮件联系",
+    "list": [
+      {
+        "name": "张明",
+        "role": "主席",
+        "bio": "区块链技术爱好者，专注智能合约开发",
+        "contact": "zhangming@example.com",
+        "color": "from-blue-400 to-blue-600"
+      },
+      {
+        "name": "李芳",
+        "role": "副主席",
+        "bio": "数据分析专家，致力于区块链数据研究",
+        "contact": "lifang@example.com",
+        "color": "from-emerald-400 to-emerald-600"
+      },
+      {
+        "name": "王伟",
+        "role": "技术负责人",
+        "bio": "全栈开发者，推动技术实践与创新",
+        "contact": "wangwei@example.com",
+        "color": "from-purple-400 to-purple-600"
+      },
+      {
+        "name": "陈思",
+        "role": "运营负责人",
+        "bio": "品牌与市场推广负责人，打造协会影响力",
+        "contact": "chensi@example.com",
+        "color": "from-orange-400 to-orange-600"
+      }
+    ]
+  },
+  "resources": {
+    "title": "学习资源",
+    "subtitle": "整合高质量学习资源，支持你的成长路径",
+    "list": [
+      {
+        "title": "GitHub 仓库",
+        "description": "访问我们的 GitHub 获取最新项目代码、教程与示例",
+        "url": "https://github.com",
+        "gradient": "from-gray-700 to-gray-900"
+      },
+      {
+        "title": "区块链研究报告",
+        "description": "深入分析报告与行业研究，掌握前沿技术趋势与市场动态",
+        "url": "#research",
+        "gradient": "from-blue-600 to-blue-900"
+      },
+      {
+        "title": "学习资料",
+        "description": "精选教程、文档及最佳实践指南，帮助你快速入门",
+        "url": "#materials",
+        "gradient": "from-purple-600 to-purple-900"
+      },
+      {
+        "title": "下载中心",
+        "description": "获取会议资料、演示文稿、工具等相关文件",
+        "url": "#downloads",
+        "gradient": "from-emerald-600 to-emerald-900"
+      }
+    ],
+    "featuredTitle": "精选资源",
+    "featured": [
+      {
+        "title": "📚 区块链基础教程系列",
+        "description": "从零开始学习区块链，包含密码学、共识算法、智能合约等核心内容"
+      },
+      {
+        "title": "💻 Solidity 开发入门指南",
+        "description": "掌握智能合约开发技能，包含项目实操与常见安全问题"
+      },
+      {
+        "title": "🔗 DeFi 应用案例分析",
+        "description": "深入理解去中心化金融应用，学习前沿市场项目的运作机制"
+      }
+    ],
+    "learnMore": "了解更多"
+  },
+  "social": {
+    "title": "社交媒体",
+    "subtitle": "在主要平台关注我们，获取最新动态",
+    "list": [
+      {
+        "name": "GitHub",
+        "description": "查看我们的代码仓库与项目",
+        "url": "https://github.com",
+        "color": "bg-[#24292e] hover:bg-[#2f363d]"
+      },
+      {
+        "name": "LinkedIn",
+        "description": "关注职业发展与行业资讯",
+        "url": "https://linkedin.com",
+        "color": "bg-[#0077b5] hover:bg-[#008ec4]"
+      },
+      {
+        "name": "Instagram",
+        "description": "了解我们的活动与日常分享",
+        "url": "https://instagram.com",
+        "color": "bg-gradient-to-br from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-90"
+      },
+      {
+        "name": "微信",
+        "description": "关注我们的微信公众号",
+        "url": "#wechat",
+        "color": "bg-[#07c160] hover:bg-[#08d169]"
+      }
+    ],
+    "contactTitle": "更多联系方式",
+    "emailLabel": "邮箱",
+    "emailValue": "contact@example.com",
+    "wechatLabel": "微信公众号",
+    "wechatValue": "CUITBCA - 链接未来"
+  },
+  "footer": {
+    "aboutDescription": "致力于推广区块链技术学习与应用，打造开放包容的学生社区。",
+    "quickLinksTitle": "快速导航",
+    "quickLinks": [
+      { "label": "关于我们", "href": "#about" },
+      { "label": "成员", "href": "#members" },
+      { "label": "资源", "href": "#resources" }
+    ],
+    "socialTitle": "社交平台",
+    "socialLinks": [
+      { "label": "GitHub", "href": "#" },
+      { "label": "Twitter", "href": "#" },
+      { "label": "Instagram", "href": "#" }
+    ],
+    "contactTitle": "联系我们",
+    "contactEmail": "contact@cuitbca.com",
+    "contactAddress": "中国民航飞行学院",
+    "copyright": "© 2025 CUIT 区块链协会，保留所有权利。"
   }
 }
