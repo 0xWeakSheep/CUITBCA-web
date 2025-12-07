@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/i18n/language-provider";
 
 const fadeIn = {
@@ -24,7 +23,7 @@ export function Hero() {
   const hero = messages.hero;
 
   return (
-    <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-20 md:pt-28 text-center">
+    <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-12 md:pt-20 text-center">
       <motion.div variants={stagger} initial="initial" animate="animate" className="max-w-4xl space-y-8">
         <motion.div variants={fadeIn} className="flex justify-center mb-8">
           <div className="relative w-32 h-32 md:w-40 md:h-40">
@@ -58,12 +57,9 @@ export function Hero() {
           {hero.description}
         </motion.p>
 
-        <motion.div variants={fadeIn} className="flex flex-col md:flex-row items-center justify-center gap-6 pt-8">
+        <motion.div variants={fadeIn} className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6">
           <button className="group relative px-8 py-4 text-sm font-bold tracking-widest text-[#020617] bg-[#38bdf8] hover:bg-[#34d399] transition-all duration-300">
-            <span className="relative z-10 flex items-center gap-2">
-              {hero.ctaJoin}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </span>
+            <span className="relative z-10 flex items-center gap-2">{hero.ctaJoin}</span>
             <div className="absolute inset-0 bg-white/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
           <button className="px-8 py-4 text-sm font-bold tracking-widest text-white border border-white/20 hover:bg-white/5 transition-all duration-300 backdrop-blur-sm">
@@ -71,6 +67,7 @@ export function Hero() {
           </button>
         </motion.div>
       </motion.div>
+
     </main>
   );
 }

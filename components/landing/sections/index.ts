@@ -1,4 +1,6 @@
-export { AboutSection } from "./AboutSection";
-export { MembersSection } from "./MembersSection";
-export { ResourcesSection } from "./ResourcesSection";
-export { SocialMediaSection } from "./SocialMediaSection";
+export * from "./AboutSection";
+export * from "./MembersSection";
+export * from "./ResourcesSection";
+export * from "./SocialMediaSection";
+export * from "./StatsSection";
+export * from "./FeaturesSection";
