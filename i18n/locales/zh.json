@@ -2,17 +2,44 @@
   "navigation": {
     "home": "首页",
     "about": "关于",
+    "features": "优势",
     "members": "成员",
     "resources": "资源",
     "contact": "联系"
   },
+  "stats": {
+    "projects": "项目完成",
+    "clients": "合作客户",
+    "satisfaction": "客户满意度",
+    "awards": "行业奖项"
+  },
+  "features": {
+    "title": "社群亮点",
+    "items": [
+      {
+        "title": "多学科核心团队",
+        "description": "由研究组、技术组、运营组的同学与指导老师共同协作，负责协会日常运作。",
+        "link": "了解团队"
+      },
+      {
+        "title": "实践驱动学习",
+        "description": "每周研讨、Hackathon 与校园项目，让成员在真实场景中沉浸式实践区块链技术。",
+        "link": "查看活动"
+      },
+      {
+        "title": "持续社群支持",
+        "description": "学习小组、导师答疑与校友资源，为成员的技术与职业发展提供长期陪伴。",
+        "link": "加入社群"
+      }
+    ]
+  },
   "hero": {
-    "tagline": "成立于2020年 // 区块链协会",
+    "tagline": "成立于2020年 // 学生区块链协会",
     "titlePrimary": "去中心化",
     "titleSecondary": "未来",
-    "description": "我们是新数字经济的架构师，连接有远见的开发者与创新者，共同构建明日基础设施。",
-    "ctaJoin": "加入我们",
-    "ctaExplore": "探索"
+    "description": "我们是新数字经济的架构师，连接有远见的开发者与创新者，共同在校园中构建明日的去中心化基础设施。",
+    "ctaJoin": "成为成员",
+    "ctaExplore": "了解活动"
   },
   "about": {
     "title": "关于我们",

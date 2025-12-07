@@ -2,17 +2,44 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "features": "Features",
     "members": "Members",
     "resources": "Resources",
     "contact": "Contact"
   },
+  "stats": {
+    "projects": "Projects Completed",
+    "clients": "Clients",
+    "satisfaction": "Satisfaction",
+    "awards": "Awards"
+  },
+  "features": {
+    "title": "Our Community Strengths",
+    "items": [
+      {
+        "title": "Multidisciplinary Core Team",
+        "description": "Student leaders from research, development, and operations groups work closely with faculty mentors to run the association.",
+        "link": "Meet the Team"
+      },
+      {
+        "title": "Hands-on Learning",
+        "description": "Weekly workshops, hackathons, and campus projects help members apply blockchain knowledge through real practice.",
+        "link": "Upcoming Events"
+      },
+      {
+        "title": "Peer & Alumni Support",
+        "description": "Study groups, mentors, and alumni resources provide ongoing guidance for members' technical and career growth.",
+        "link": "Join the Community"
+      }
+    ]
+  },
   "hero": {
-    "tagline": "EST. 2020 // BLOCKCHAIN ASSOCIATION",
+    "tagline": "EST. 2020 // STUDENT BLOCKCHAIN ASSOCIATION",
     "titlePrimary": "DECENTRALIZED",
     "titleSecondary": "FUTURE",
-    "description": "We are architects of the new digital economy. Connecting visionaries, developers, and innovators to build the infrastructure of tomorrow.",
-    "ctaJoin": "JOIN US",
-    "ctaExplore": "EXPLORE"
+    "description": "We are architects of the new digital economy. CUIT Blockchain Association connects visionary students, developers, and innovators to co-create tomorrow's decentralized infrastructure on campus.",
+    "ctaJoin": "BECOME A MEMBER",
+    "ctaExplore": "DISCOVER EVENTS"
   },
   "about": {
     "title": "About Us",

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, BookOpen, Code, Download, FileText } from "lucide-react";
+import { BookOpen, Code, Download, FileText } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Card } from "@/components/ui/Card";
 import type { ResourceItem } from "@/types";
@@ -42,9 +42,8 @@ export function ResourcesSection() {
                   <h3 className="text-2xl font-bold text-white mb-4">{resource.title}</h3>
                   <p className="text-white/80 leading-relaxed mb-8 flex-grow">{resource.description}</p>
 
-                  <div className="flex items-center gap-3 text-white/70 group-hover:text-white transition-colors text-sm font-bold tracking-widest uppercase">
-                    <span>{resourceContent.learnMore}</span>
-                    <ArrowRight size={16} className="group-hover:translate-x-2 transition-transform duration-300" />
+                  <div className="text-white/70 group-hover:text-white transition-colors text-sm font-bold tracking-widest uppercase">
+                    {resourceContent.learnMore}
                   </div>
                 </div>
               </a>
