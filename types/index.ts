@@ -13,17 +13,22 @@ export type MemberProfile = {
   color: string;
 };
 
+type IconProps = {
+  size?: number;
+  className?: string;
+};
+
 export type ResourceItem = {
   title: string;
   description: string;
-  icon: ComponentType<{ size?: number }>;
+  icon: ComponentType<IconProps>;
   url: string;
   gradient: string;
 };
 
 export type PlatformLink = {
   name: string;
-  icon: ComponentType<{ size?: number }>;
+  icon: ComponentType<IconProps>;
   url: string;
   description: string;
   color: string;
