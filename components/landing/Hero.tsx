@@ -20,7 +20,7 @@ const stagger = {
 
 export function Hero() {
   return (
-    <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center">
+    <main className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-20 md:pt-28 text-center">
       <motion.div variants={stagger} initial="initial" animate="animate" className="max-w-4xl space-y-8">
         <motion.div variants={fadeIn} className="flex justify-center mb-8">
           <div className="relative w-32 h-32 md:w-40 md:h-40">
@@ -30,6 +30,7 @@ export function Hero() {
               sizes="(min-width: 768px) 160px, 128px"
               fill
               className="object-contain drop-shadow-[0_0_30px_rgba(56,189,248,0.3)]"
+              style={{ filter: "brightness(0) invert(1)" }}
               priority
             />
           </div>
