@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useLanguage } from "@/i18n/language-provider";
+import { CyberpunkText } from "@/components/ui/CyberpunkText";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -39,13 +40,6 @@ export function Hero() {
           </div>
         </motion.div>
 
-        <motion.div
-          variants={fadeIn}
-          className="inline-block px-4 py-1 mb-4 text-xs tracking-[0.2em] text-[#34d399] border border-[#34d399]/30 rounded-full bg-[#34d399]/10 backdrop-blur-sm"
-        >
-          {hero.tagline}
-        </motion.div>
-
         <motion.h1 variants={fadeIn} className="text-5xl md:text-8xl font-bold tracking-tight leading-tight">
           <span className="block text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">{hero.titlePrimary}</span>
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-white to-[#34d399]">
@@ -53,9 +47,9 @@ export function Hero() {
           </span>
         </motion.h1>
 
-        <motion.p variants={fadeIn} className="max-w-2xl mx-auto text-lg text-white/60 tracking-wide leading-relaxed">
-          {hero.description}
-        </motion.p>
+        <motion.div variants={fadeIn} className="max-w-2xl mx-auto text-lg text-white/60 tracking-wide leading-relaxed">
+          <CyberpunkText text={hero.description} />
+        </motion.div>
 
         <motion.div variants={fadeIn} className="flex flex-col md:flex-row items-center justify-center gap-6 pt-6">
           <button className="group relative px-8 py-4 text-sm font-bold tracking-widest text-[#020617] bg-[#38bdf8] hover:bg-[#34d399] transition-all duration-300">
