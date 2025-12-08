@@ -32,10 +32,18 @@ function ParticleField(props: ParticleFieldProps) {
   const ref = useRef<THREE.Points>(null!);
   const [sphere] = useState(() => createSpherePositions());
 
-  useFrame((_, delta) => {
+  useFrame((state, delta) => {
     if (ref.current) {
+      // Auto rotation
       ref.current.rotation.x -= delta / 15;
       ref.current.rotation.y -= delta / 20;
+      
+      // Scroll influence (subtle parallax)
+      // We use state.clock.elapsedTime to ensure smooth animation combined with scroll
+      // Note: accessing window.scrollY directly in useFrame is acceptable for this visual effect
+      const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+      ref.current.rotation.z = scrollY * 0.0002; 
+      ref.current.position.y = scrollY * 0.0005; 
     }
   });
 

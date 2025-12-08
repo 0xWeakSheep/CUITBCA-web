@@ -6,7 +6,7 @@ import { Check, Send, Loader2, AlertCircle } from "lucide-react";
 import { Navigation } from "@/components/landing/Navigation";
 import { Footer } from "@/components/landing/Footer";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CinematicCanvas } from "@/components/landing/CinematicCanvas";
+import CinematicCanvas from "@/components/landing/CinematicCanvas";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -83,6 +83,7 @@ export default function ContactPage() {
 
   return (
     <div className="relative min-h-screen bg-[#020617] text-white selection:bg-[#38bdf8] selection:text-[#020617]">
+      <CinematicCanvas />
       <Navigation />
       
       <div className="pt-32 pb-20 px-4 relative z-10">
@@ -278,4 +279,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

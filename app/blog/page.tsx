@@ -7,7 +7,6 @@ import Link from "next/link";
 import { Clock, User, ArrowRight } from "lucide-react";
 import { Navigation } from "@/components/landing/Navigation";
 import { Footer } from "@/components/landing/Footer";
-import { SectionHeader } from "@/components/ui/SectionHeader";
 
 const categories = [
   { id: "all", label: "全部" },
@@ -172,4 +171,3 @@ export default function BlogPage() {
     </div>
   );
 }
-

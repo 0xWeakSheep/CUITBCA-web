@@ -4,10 +4,10 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { useLanguage } from "@/i18n/language-provider";
 
 const highlightStyles = [
-  { border: "border-[#38bdf8]", bg: "bg-[#38bdf8]/10", text: "text-[#38bdf8]" },
-  { border: "border-[#34d399]", bg: "bg-[#34d399]/10", text: "text-[#34d399]" },
-  { border: "border-purple-500", bg: "bg-purple-500/10", text: "text-purple-400" },
-  { border: "border-white/40", bg: "bg-white/5", text: "text-white/90" },
+  { border: "border-white/20", bg: "bg-white/5", text: "text-white/80" },
+  { border: "border-white/20", bg: "bg-white/5", text: "text-white/80" },
+  { border: "border-white/20", bg: "bg-white/5", text: "text-white/80" },
+  { border: "border-white/20", bg: "bg-white/5", text: "text-white/80" },
 ];
 
 export function AboutSection() {

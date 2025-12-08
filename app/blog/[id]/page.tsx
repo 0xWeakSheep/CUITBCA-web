@@ -1,28 +1,9 @@
 "use client";
-
-import { useState, useEffect } from "react";
-import { motion, useScroll, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Clock, Calendar, User, Share2 } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, Share2 } from "lucide-react";
 import { Navigation } from "@/components/landing/Navigation";
 import { Footer } from "@/components/landing/Footer";
-
-function ReadingProgress() {
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001
-  });
-
-  return (
-    <motion.div
-      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#38bdf8] to-[#34d399] origin-left z-50"
-      style={{ scaleX }}
-    />
-  );
-}
 
 export default function BlogPost() {
   // Mock data for the article
@@ -60,7 +41,6 @@ export default function BlogPost() {
 
   return (
     <div className="relative min-h-screen bg-[#020617] text-white selection:bg-[#38bdf8] selection:text-[#020617]">
-      <ReadingProgress />
       <Navigation />
 
       <article className="pt-32 pb-20 px-4 relative z-10">
@@ -131,4 +111,3 @@ export default function BlogPost() {
     </div>
   );
 }
-

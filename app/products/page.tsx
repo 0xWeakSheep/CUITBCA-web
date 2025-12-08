@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Check, ArrowRight, Zap, Shield, Rocket } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 import { Navigation } from "@/components/landing/Navigation";
 import { Footer } from "@/components/landing/Footer";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -225,4 +225,3 @@ export default function ProductsPage() {
     </div>
   );
 }
-
