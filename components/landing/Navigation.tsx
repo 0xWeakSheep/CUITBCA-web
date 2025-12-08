@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useLanguage } from "@/i18n/language-provider";
 import type { Messages } from "@/i18n/config";
+import { useState } from "react";
 
 const navTargets = [
   { key: "home", href: "/" },
@@ -17,6 +18,13 @@ const navTargets = [
 
 export function Navigation() {
   const { language, setLanguage, messages } = useLanguage();
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setIsScrolled(latest > 50);
+  });
+
   const localizedLinks = navTargets.map(({ key, href }) => ({
     href,
     label: messages.navigation[key],
@@ -29,9 +37,17 @@ export function Navigation() {
   return (
     <motion.nav
       initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 border-b border-white/5 bg-[#020617]/50 backdrop-blur-md"
+      animate={{ 
+        opacity: 1, 
+        y: 0,
+        backgroundColor: isScrolled ? "rgba(2, 6, 23, 0.8)" : "rgba(2, 6, 23, 0)",
+        backdropFilter: isScrolled ? "blur(12px)" : "blur(0px)",
+        borderBottomColor: isScrolled ? "rgba(255, 255, 255, 0.05)" : "rgba(255, 255, 255, 0)",
+        paddingTop: isScrolled ? "1rem" : "1.5rem",
+        paddingBottom: isScrolled ? "1rem" : "1.5rem",
+      }}
+      transition={{ duration: 0.3 }}
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 border-b"
     >
       <Link href="/" className="flex items-center gap-3">
         <Image
