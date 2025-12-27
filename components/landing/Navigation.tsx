@@ -9,8 +9,6 @@ import { useState } from "react";
 
 const navTargets = [
   { key: "home", href: "/" },
-  { key: "products", href: "/products" },
-  { key: "portfolio", href: "/portfolio" },
   { key: "blog", href: "/blog" },
   { key: "about", href: "/about" },
   { key: "contact", href: "/contact" },
