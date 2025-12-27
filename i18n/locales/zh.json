@@ -76,7 +76,8 @@
         "role": "主席",
         "bio": "区块链技术爱好者，专注智能合约开发",
         "contact": "zhangming@example.com",
-        "color": "from-blue-400 to-blue-600"
+        "color": "from-blue-400 to-blue-600",
+        "noiseBackground": "/noise.png"
       },
       {
         "name": "李芳",
@@ -90,7 +91,8 @@
         "role": "技术负责人",
         "bio": "全栈开发者，推动技术实践与创新",
         "contact": "wangwei@example.com",
-        "color": "from-purple-400 to-purple-600"
+        "color": "from-purple-400 to-purple-600",
+        "noiseBackground": "/noise.png"
       },
       {
         "name": "陈思",

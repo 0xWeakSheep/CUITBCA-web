@@ -4,11 +4,18 @@ export type NavLink = {
 };
 
 export type MemberProfile = {
-  name: string;
-  role: string;
-  bio: string;
-  contact: string;
-  color: string;
+  id?: string | number; // 唯一标识符
+  name?: string;
+  role?: string;
+  bio?: string;
+  contact?: string;
+  email?: string;
+  avatar?: string; // 头像图片URL
+  color?: string; // 渐变背景颜色（如果没有avatar时使用）
+  noiseBackground?: string;
+  linkedin?: string;
+  twitter?: string;
+  skills?: string[];
 };
 
 export type ResourceItem = {
