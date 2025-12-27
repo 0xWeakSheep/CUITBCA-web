@@ -76,7 +76,8 @@
         "role": "President",
         "bio": "Blockchain technology enthusiast, focused on smart contract development",
         "contact": "zhangming@example.com",
-        "color": "from-blue-400 to-blue-600"
+        "color": "from-blue-400 to-blue-600",
+        "noiseBackground": "/noise.png"
       },
       {
         "name": "Li Fang",
@@ -90,7 +91,8 @@
         "role": "Technical Lead",
         "bio": "Full-stack developer, driving technical practice and innovation",
         "contact": "wangwei@example.com",
-        "color": "from-purple-400 to-purple-600"
+        "color": "from-purple-400 to-purple-600",
+        "noiseBackground": "/noise.png"
       },
       {
         "name": "Chen Si",

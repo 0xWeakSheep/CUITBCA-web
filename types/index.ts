@@ -9,6 +9,11 @@ export type MemberProfile = {
   bio: string;
   contact: string;
   color: string;
+  noiseBackground?: string;
+  linkedin?: string;
+  twitter?: string;
+  email?: string;
+  skills?: string[];
 };
 
 export type ResourceItem = {
