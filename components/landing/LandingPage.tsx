@@ -6,7 +6,7 @@ import type { MouseEvent } from "react";
 import { Hero } from "./Hero";
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
-import { AboutSection, MembersSection, ResourcesSection, SocialMediaSection, StatsSection, FeaturesSection } from "./sections";
+import { AboutSection, MembersSection, ResourcesSection, SocialMediaSection, StatsSection, FeaturesSection, TimelineSection } from "./sections";
 
 const CinematicCanvas = dynamic(() => import("./CinematicCanvas"), { ssr: false });
 
@@ -38,6 +38,7 @@ export default function LandingPage() {
       <FeaturesSection />
       <StatsSection />
       <AboutSection />
+      <TimelineSection />
       <MembersSection />
       <ResourcesSection />
       <SocialMediaSection />
