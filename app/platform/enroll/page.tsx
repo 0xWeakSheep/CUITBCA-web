@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, Suspense, useEffect, useMemo, useState } from "react";
 
 type AuthResponse = {
   authenticated: boolean;
@@ -21,7 +21,7 @@ const errorMap: Record<string, string> = {
   oauth_callback_failed: "GitHub 回调失败，请检查 Client ID/Secret 和回调地址。",
 };
 
-export default function PlatformEnrollPage() {
+function EnrollForm() {
   const searchParams = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -131,5 +131,13 @@ export default function PlatformEnrollPage() {
         </p>
       ) : null}
     </div>
+  );
+}
+
+export default function PlatformEnrollPage() {
+  return (
+    <Suspense fallback={<div className="mx-auto max-w-3xl p-6 text-slate-300">加载中...</div>}>
+      <EnrollForm />
+    </Suspense>
   );
 }
